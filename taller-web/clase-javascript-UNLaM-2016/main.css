@@ -1,0 +1,78 @@
+.table {
+	display: table;
+	width: 100%;
+}
+.row {
+	display: table-row;
+}
+.cell {
+	display: table-cell;
+	vertical-align: middle !important;
+}
+.cell img {
+	height: 400px;
+	width: 400px;
+}
+
+.notificaciones-fb {
+	width: 400px;
+}
+
+.mensaje-alerta {
+	display: none;
+	color: red;	
+}
+
+#formulario {
+	font-size: 22px;
+	max-width: 700px;
+	background: #f7f2d3;
+	box-shadow: 4px 0 5px rgba(0,0,0,.5);
+	border: 1px solid #CCC;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.contenedor-input {
+	padding: 10px 30px;
+}
+input[type=text] {
+	line-height: 22px;
+	width: 300px;
+}
+
+.importante {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+textarea {
+	width: 100%;
+	height: 100px;
+}
+
+.aviso-contador {
+	font-size: 18px;
+}
+
+#cantidadCaracteres {
+	background: #35BAF0;
+	color: white;
+	padding: 5px 8px;
+}
+
+input[type=submit] {
+	font-size: 18px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #CCC;
+	padding: 8px 14px;
+	text-align: center;
+	width: 80px;
+}
+
+input[type=submit]:hover {
+	background: #858585;
+	color: white;
+}

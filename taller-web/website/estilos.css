@@ -1,0 +1,13 @@
+h1, p {
+	color: red;
+	display: inline-block;
+}
+body {
+	background: #CCCCCC;
+}
+.parrafo {
+	text-align: center;
+}
+#miId {
+	text-align: right;
+}

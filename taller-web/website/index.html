@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Practica</title>
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullpage.min.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="jquery.js"></script>	
+
+	<script type="text/javascript" src="jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+			  sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', 'whitesmoke', '#4BBFC3'],
+			  anchors: ['1', '2', '3', '4', '5', '6', '7'],
+			  menu: '#menu',
+			  continuousVertical: false
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<img src="" alt="" class="ancho">
+
+<ul id="menu">
+	<li data-menuanchor="1" class="active"><a href="#1">1</a></li>
+	<li data-menuanchor="2"><a href="#2">2</a></li>
+	<li data-menuanchor="3"><a href="#3">3</a></li>
+	<li data-menuanchor="4"><a href="#4">4</a></li>
+	<li data-menuanchor="5"><a href="#5">5</a></li>
+	<li data-menuanchor="6"><a href="#6">6</a></li>
+	<li data-menuanchor="7"><a href="#7">7</a></li>
+	<li data-menuanchor="7"><a href="#8">8</a></li>
+</ul>	
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1>CSS - cascading style sheets</h1>
+		<h2>UNLaM | 2016</h2>
+		<img src="logo.png" alt="Css versiones" />
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1>cascading style sheets?</h1>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Nomenclatura</h1>
+			<p><img src="reglas-css.jpg" alt=""></p>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Clases e id</h1>
+			<h2>¿Qué diferencias hay? ¿Cómo se usan?</h2>
+			<p>La diferencia es que los selectores por identificador están pensados para que el elemento que seleccionas sea único (sólo le puedes poner un identificador dado a un elemento de la página, es decir, los identificadores deben ser únicos).</p>
+			<p>Sin embargo, las clases están pensadas para poder definir el mismo estilo a varios elementos de la página. Es decir, puedes asignar una misma clase a varios elementos de la página sin problemas.</p>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Animaciones con CSS3</h1>
+			<h2><a href="http://www.w3schools.com/css/css3_animations.asp">Documentación y ejemplos</a></h2>
+				<div class="animar-div"></div>
+
+			<style>
+				.animar-div {
+				    width: 100px;
+				    height: 100px;
+				    background-color: red;
+				    position: relative;
+				    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+				    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+				    animation-name: example;
+				    animation-duration: 1s;
+				    animation-timing-function: linear;
+				    animation-delay: 2s;
+				    animation-iteration-count: infinite;
+				    //animation-direction: alternate;				    
+				}
+
+				/* Chrome, Safari, Opera */
+				@-webkit-keyframes example {
+				    0%   {background-color:red; left:0px; top:0px;}
+				    25%  {background-color:yellow; left:800px; top:0px;}
+				    50%  {background-color:blue; left:800px; top:50px;}
+				    75%  {background-color:green; left:800px; top:50px;}
+				    100% {background-color:red; left:0px; top:0px;}
+				}
+
+				/* Standard syntax */
+				@keyframes example {
+				    0%   {background-color:red; left:0px; top:0px;}
+				    25%  {background-color:yellow; left:800px; top:0px;}
+				    50%  {background-color:blue; left:800px; top:100px;}
+				    75%  {background-color:green; left:0; top:100px;}
+				    100% {background-color:red; left:0px; top:0px;}
+				}		
+			</style>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Transformaciones en CSS3</h1>
+			<h2>Las transformaciones te permiten manipular visualmente  elementos para rotarlos, torcerlos, escalarlos o transladarlos</h2>
+			<br><br>
+			<h2>Escalar:</h2>
+			<div class="item1"></div>
+
+			<style>
+				.item1 {
+					width: 100px;
+					height: 100px;
+					background: tomato;
+					display: inline-block;
+					transform: scale(.5);
+				}
+				#skey, #rotar {
+					margin: 100px 0;
+				}
+			</style>
+			<h2>Estirar:</h2>
+			<br>
+				<div id="skew">
+					<div class="element"></div>
+					<div class="element"></div>
+					<div class="element"></div>
+				</div>
+				<br><br><br>
+				<style>
+					#skew .element{
+					  display: inline-block;
+					  background-color: RED;
+					  height: 100px;
+					  width: 100px;
+					  font-size: 1px;
+					  padding: 1px;
+					  color: white;
+					  margin-right: 5px;
+					  margin-left: 5px;
+					  animation: skew 4s infinite;
+					  transform: skew(20deg);
+					  animation-direction: alternate;
+					  opacity: .7;
+					}
+
+					@keyframes skew {
+					  0% {
+					    transform: skewX(20deg);
+					  }
+					  100% {
+					    transform: skewX(-20deg);
+					  }
+					}				
+				</style>
+
+				<div id="skew-y">
+					<div class="element">
+					</div>
+					<div class="element">
+					</div>
+					<div class="element">
+					</div>					
+				</div>
+
+				<style>
+					#skew-y .element {
+					  display: inline-block;
+					  background-color: BLUE;
+					  height: 100px;
+					  width: 100px;
+					  transform: skew(20deg);
+					  font-size: 1px;
+					  padding: 1px;
+					  color: white;
+					  margin-right: 5px;
+					  margin-left: 5px;
+					  animation: shake 2s infinite;
+					  animation-direction: alternate;
+					}
+
+					@keyframes shake {
+					  0% {
+					    transform: skewY(20deg);
+					  }
+					  100% {
+					    transform: skewY(-20deg);
+					  }
+					}
+				</style>
+				<br>
+				<div id="rotar">
+					<h2>Rotar:</h2>
+					<br>
+					<div class="element">
+					</div>
+					<div class="element">
+					</div>
+					<div class="element">
+					</div>					
+				</div>
+				<style>
+					#rotar .element {
+					  display: inline-block;
+					  background-color: #0074d9;
+					  height: 100px;
+					  width: 100px;
+					  font-size: 1px;
+					  padding: 1px;
+					  color: white;
+					  margin-right: 5px;
+					  margin-left: 5px;
+					  animation: roll 3s infinite;
+					  transform: rotate(360deg);
+					  opacity: .7;
+					}
+
+					@keyframes roll {
+					  0% {
+					    transform: rotate(0);
+					  }
+					  100% {
+					    transform: rotate(360deg);
+					  }
+					}	
+				</style>
+		</div>
+	</div>	
+	<div class="section" id="section7">
+		<div class="intro">
+			<h1>Filtros de CSS3 para imágenes</h1>
+			<br><br>
+			<ul>
+				<li>filter: grayscale(1)</li>
+				<li>filter: saturate(8)</li>
+				<li>filter: hue-rotate(90deg)</li>
+				<li>filter: brightness(3)</li>
+				<li>filter: contrast(4)</li>
+				<li>filter: blur(5px)</li>
+			</ul>
+			<br><br>
+			<p><img src="guitarra.jpg" alt=""></p>
+			<br>
+		</div>
+	</div>			
+	<div class="section" id="section8">
+		<div class="intro">
+			<h1>Animaciones más complejas</h1>
+			<h2><a target="_blank" href="sistema-solar.html">Ejemplo 1: sistema solar hecho sólo con CSS</a></h2>
+			<h2><a target="_blank" href="sistema-solar-2.html">Ejemplo 2: sistema solar hecho sólo con CSS</a></h2>
+			<h2><a target="_blank" href="texto-animado.html">Ejemplo 3: svg animado sólo con estilos</a></h2>
+		</div>
+	</div>		
+</div>
+
+</body>
+</html>
